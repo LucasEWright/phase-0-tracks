@@ -1,4 +1,4 @@
-Form name = If someone else is looking at the code, it provides a name.  Not meant to be displayed on form.
+Form name =  If someone else is looking at the code, it provides a name.  Not meant to be displayed on form.
 	-Action method= most common HTTP method
 	-Action tag= indentifies page to load after form is submitted
 Fieldset= used to group related elements on the form, and draws a box around the elements.
