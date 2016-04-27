@@ -1,0 +1,22 @@
+body {
+	background-color: Black
+}
+#octopus {
+	position: relative;
+	text-align: center;
+	margin-top: 75px;
+	z-index: 0; 
+}
+
+#hat {
+	position: static;
+	text-align: center;
+	z-index: 1; 
+
+}
+
+#glasses {
+z-index: 2; 
+
+
+}
