@@ -2,6 +2,10 @@ blockquote {
   border-left: 5px solid blue;
   padding: 15px;
   margin-left: 0px;
+  text-align: center;
+}
+body {
+  width: 960px;
 }
 
 cite {
@@ -9,9 +13,18 @@ cite {
   margin-top: 10px;
 }
 
-#external-links ul {
+#external-links  {
   list-style-type: none;
   padding-left: 0px;
+  float: left;
+  width: 200px;
+  margin-top:5%;
+  vertical-align: top;
+
+}
+#main {
+  width: 756px;
+  float: right;
 }
 
 /* you're welcome to edit the
