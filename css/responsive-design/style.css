@@ -18,9 +18,9 @@ cite {
   float: left;
   width: 20%;
   min-width: 10%;
-  margin-top:5%;
+  margin-top:7%;
   vertical-align: top;
-  background-color: lightpink;
+
 
 }
 #main {
@@ -34,6 +34,7 @@ image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
+  padding: 10px;
 }
 
 figure {
@@ -46,4 +47,13 @@ figcaption {
   text-align: right;
 }
 
+/* added to remove sidebar when view is too tight*/
+@media (max-width: 490px), {
+    #external-links {
+        display: none;
+    }
+    #main {
+      width: 100%;
+    }
+}
 
