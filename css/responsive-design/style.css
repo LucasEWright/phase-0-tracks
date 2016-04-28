@@ -48,12 +48,18 @@ figcaption {
 }
 
 /* added to remove sidebar when view is too tight*/
-@media (max-width: 490px), {
+@media (max-width: 490px) {
     #external-links {
         display: none;
     }
     #main {
       width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+ 
+    #main {
+      font-size: x-large;
     }
 }
 
