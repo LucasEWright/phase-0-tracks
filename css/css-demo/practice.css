@@ -14,3 +14,7 @@
 
 	font-size: .8em;
 }
+li:last-child {
+
+	color: blue;
+}
