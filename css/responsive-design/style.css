@@ -3,15 +3,30 @@ blockquote {
   padding: 15px;
   margin-left: 0px;
 }
+body {
+  max-width: 960px;
+}
 
 cite {
   display: block;
   margin-top: 10px;
 }
 
-#external-links ul {
+#external-links  {
   list-style-type: none;
   padding-left: 0px;
+  float: left;
+  width: 20%;
+  min-width: 10%;
+  margin-top:7%;
+  vertical-align: top;
+
+
+}
+#main {
+  width: 80%;
+  min-width: 65%;
+  float: right;
 }
 
 /* you're welcome to edit the
@@ -19,6 +34,7 @@ image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
+  padding: 10px;
 }
 
 figure {
@@ -30,3 +46,20 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+/* added to remove sidebar when view is too tight*/
+@media (max-width: 490px) {
+    #external-links {
+        display: none;
+    }
+    #main {
+      width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+ 
+    #main {
+      font-size: x-large;
+    }
+}
+
