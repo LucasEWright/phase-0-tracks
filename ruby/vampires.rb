@@ -15,10 +15,18 @@ def questions
 age_check = 2016 - birthyear 
 
 	if age == age_check && (gbread == "yes" || insurance == "yes")
-	print "probably not a vampire"
+		print "probably not a vampire"
+	elsif age != age_check && (gbread == "no" || insurance == "no")
+		print "probably a vampire"
+	elsif (age != age_check && gbread != "yes" && insurance != "yes")
+		print "almost certainly a vampire"
+	elsif name == "Drake Cula" || "Tu Fang"
+		print "definitely a vampire"
 	else
-	print "probably a vampire"
+		print "Results inconclusive."
 	end
+	
+
 end
 
 
