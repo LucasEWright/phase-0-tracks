@@ -15,20 +15,35 @@ def questions
 	gbread = gets.chomp
 	puts "Would you like to enroll in the company’s health insurance?"
 	insurance = gets.chomp
+	
+	puts "Please list your allergies. Input Done when your list is complete or if you don't have any."
+	allergies = gets.chomp
+	
+	while (allergies != "done" ) do
+		allergies = gets.chomp
+		if (allergies == "sushine")
+			print "probably a vampire"
+		else
+			allergies = gets.chomp
+		end
+	end
+	
 
 age_check = 2016 - birthyear 
 
 	if age == age_check && (gbread == "yes" || insurance == "yes")
-	print "probably not a vampire"
+		print "probably not a vampire"
 	elsif age != age_check && (gbread == "no" || insurance == "no")
-	print "probably a vampire"
+		print "probably a vampire"
 	elsif (age != age_check && gbread != "yes" && insurance != "yes")
-	print "almost certainly a vampire"
+		print "almost certainly a vampire"
 	elsif (name == "Drake Cula" || "Tu Fang" && (age == age_check && gbread == "yes" && insurance == "yes"))
-	print "definitely a vampire"
+		print "definitely a vampire"
 	else
 		print "Results inconclusive."
 	end
+	
+	puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 	
 end
 
@@ -36,6 +51,6 @@ end
   	questions
 	 number -= 1
 	end
-
+	
 
 questions
