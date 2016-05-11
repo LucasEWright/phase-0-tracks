@@ -1,23 +1,24 @@
-applicant = {
-	name => name,
-	children => children,
-	favblueshade => favblueshade,
-	badclient => badclient,
-}
 
-def questions
+
+ 	applicant = Hash.new
+	
 	puts "What is your name?"
-	name = gets.chomp
+	applicant["name"] = gets.chomp
 	puts "How many children do you have?"
 	children = gets.chomp
-	children= children.to_i
+	applicant["children"]= children.to_i
 	puts "What is your fave shade of blue?"
-	favblueshade = gets.chomp
+	applicant["favblueshade"] = gets.chomp
 	puts "Will you be the worst client I've ever had?"
-	badclient = gets.chomp
-end	
- questions
+	applicant["badclient"] = gets.chomp
 
 puts applicant
 
-
+	puts "Are you sure that is your favorite color?"
+	follow_up = gets.chomp
+	if follow_up == "none" then
+		puts applicant
+	else
+		applicant.each {|k, v| applicant[k] = v = follow_up}
+		puts applicant
+	end
