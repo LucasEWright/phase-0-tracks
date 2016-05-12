@@ -1,4 +1,6 @@
 
+	#need to write pseudocode and fix follow-up questions
+ 	
 
  	applicant = Hash.new
 	
