@@ -1,5 +1,11 @@
 
-	#need to write pseudocode and fix follow-up questions
+	#get user input, assign hash for each input
+	#print hashes
+	#add follow-up questions and reassign hash value if user gives new value
+	#print hashes
+	#
+	
+
  	
 
  	applicant = Hash.new
@@ -16,7 +22,7 @@
 
 puts applicant
 
-	puts "Are you sure that is your favorite color?"
+	puts "Are you sure that is your favorite color? If it is, type none, otherwise enter your real answer"
 	follow_up = gets.chomp
 	if follow_up == "none" then
 		puts applicant
