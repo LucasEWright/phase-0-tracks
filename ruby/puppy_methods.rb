@@ -23,7 +23,7 @@ class Puppy
   end
 end
 
-
+#Driver code for class cats 
 puppy = Puppy.new
 puppy.fetch("boyfriend")
 puppy.speak(5)
@@ -31,6 +31,36 @@ puppy.roll_over
 puppy.dog_years(3)
 puppy.play_dead
 
+#--------------------------------
+class Cats
+	
+	def initialize
+	end
 
+	def jumps
+		puts "This cat jumps..."
+		
+	end
 
-#_____________________
+	def lands
+		puts "...lands on it's feet"
+	end
+end
+	
+cats_array = []
+loop_num = 0 
+
+while loop_num < 50
+	cats_array.push(Cats.new)
+	loop_num += 1
+end
+
+cats_array.each do |pet|
+	pet.jumps
+	pet.lands
+end
+
+#Driver code for class cats 
+cats = Cats.new
+cats.jumps
+cats.lands
