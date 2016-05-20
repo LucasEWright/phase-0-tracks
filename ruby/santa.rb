@@ -1,4 +1,5 @@
 class Santas
+attr_reader :age, :ethnicity
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
   end
@@ -25,14 +26,7 @@ class Santas
   	@reindeer_ranking = @reindeer_ranking.push(mad_at)
   	puts @reindeer_ranking
   end
-  
-  def age
-  	@age
-  end
 
-  def ethnicity
-  	@ethnicity
-  end
 
 end
 
