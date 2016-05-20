@@ -1,5 +1,6 @@
 class Santas
-attr_reader :age, :ethnicity
+attr_reader :age
+attr_accessor :ethnicity
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
   end
@@ -29,22 +30,31 @@ attr_reader :age, :ethnicity
 
 
 end
+________________________
 
-gender = ["agender", "female", "male", "bigender"]
-ethnicity = ["white", "black", "native american", "latino"]
-santas = []
+#Problems
+#Can't get a random sample from the array.  I've tried .sample, .choice, rand().to_a, etc... trying all in multiple layers
+#of the code.  Also, I don't know if it's related to the random number problem, but I also can get my index to move. 
+#also triend While and If, to no avail.
 
-puts "creating some diversity..."
-gender.each do |gender|
-	puts "We now have a #{gender} Santa. Welcome!"
-	puts "___________"
+gender = ["agender", "female", "male", "bigender"].sample
+ethnicity = ["white", "black", "native american", "latino"].sample
+age = (1..140).to_a
+age = age.sample
+index = 10
+
+until index == 0 
+	gender.each do |gender|
+	ethnicity.each do |ethnicity|
+	age.each do |age|
+	  	puts "This is a santa who is #{gender}, #{ethnicity}, and is #{age} years old."
+	  	index -= 1
+	  	puts "----"
+	end
+	end
+end 
 end
-ethnicity.each do |ethnicity|
-	puts "We now have a #{ethnicity} Santa. Welcome!"
-	puts "___________"
-end
-
-
+_________________________
 santas = Santas.new("male", "white")
 santas.eat_milk_and_cookies("PB")
 santas.speak
