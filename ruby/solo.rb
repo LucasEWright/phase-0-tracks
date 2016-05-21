@@ -21,16 +21,16 @@
 #===============================================================
 
 class Transformer
-	attr_reader :mood
-	attr_accessor :type, :age
+	attr_reader 
+	attr_accessor :type, :age, :height, :mood, :first, :last, :transforms_into
 
-	def initialize(height, mood)
+	def initialize 
 		puts "Initializing a new transformer"
 		@type = "robot"
 		@age = rand(0...100)
-		@height = height.to_i
-		@mood = mood
-		puts "who is a #{age} year old #{mood} #{type} that is #{height} feet tall."
+		#@height  
+		#@mood 
+	#	puts "who is a #{age} year old #{mood} #{type} that is #{height} feet tall."
 	end	
 
 	def name(first, last)
@@ -54,26 +54,43 @@ end
 def user_loop 
 index = 1
 while index > 0
+new_array = []
 
+new_transformer = Transformer.new
 puts "How tall, in feet, is your Transformer?"
 	@height = gets.chomp
+ 	 new_transformer.height = @height
+ 	 new_array.push(new_transformer)
 puts "What is thier temperment?"
 	@mood = gets.chomp
+	 new_transformer.mood = @mood
+ 	 new_array.push(new_transformer)
 puts "What is thier first name?"
 	@first = gets.chomp
+	 new_transformer.first = @first
+ 	 new_array.push(new_transformer)
 puts "What is thier last name?"
 	@last = gets.chomp
+	 new_transformer.last = @last
+ 	 new_array.push(new_transformer)
 puts "What does your Transformer turn into?"
 	@transforms_into = gets.chomp
+	 new_transformer.transforms_into = @transforms_into
+ 	 new_array.push(new_transformer)
 puts "Would you like to create another Transformer? yes or no"
 	answer = gets.chomp
 	if answer == "yes" 
 		user_loop
+		index = 0
 	else 
-		puts "Thanks for playing!"
 		index -=1
+		puts "Thanks for playing!!"
 	end
 end 
+new_array.each do |type, age, height, mood, first, last, transforms_into|
+		puts "You've create a Transformer who is a #{age} year old #{mood} #{type} who is #{height} feet tall and can turn into a #{transforms_into}!"
+end
+p new_array
 end
 
 user_loop
@@ -82,12 +99,4 @@ user_loop
 
 
 
-
-
-
-
-
-
-
-end
 
