@@ -1,13 +1,7 @@
 class Santas
-attr_reader :age
-attr_accessor :ethnicity
-  def speak
-    puts "Ho, ho, ho! Haaaappy holidays!"
-  end
-
-  def eat_milk_and_cookies(cookie)
-    puts "That was a good #{cookie}!"
-  end
+  
+attr_reader :ethnicity
+attr_accessor :gender, :age
 
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance ..."
@@ -17,46 +11,54 @@ attr_accessor :ethnicity
      "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     @age = 0
   end
+
+  def speak
+    puts "Ho, ho, ho! Haaaappy holidays!"
+  end
+
+  def eat_milk_and_cookies(cookie)
+    puts "That was a good #{cookie}!"
+  end
   
   def celebrate_birthday
-  	@age = age + 1
-  	puts "Now they are #{age}!"
+    @age = age + 1
+    puts "Now they are #{age}!"
   end 
 
   def get_mad_at(mad_at)
-  	@reindeer_ranking = @reindeer_ranking.push(mad_at)
-  	puts @reindeer_ranking
+    @reindeer_ranking = @reindeer_ranking.push(mad_at)
+    puts @reindeer_ranking
   end
 
-
 end
-________________________
+#________________________
 
-#Problems
-#Can't get a random sample from the array.  I've tried .sample, .choice, rand().to_a, etc... trying all in multiple layers
-#of the code.  Also, I don't know if it's related to the random number problem, but I also can get my index to move. 
-#also triend While and If, to no avail.
 
-gender = ["agender", "female", "male", "bigender"].sample
-ethnicity = ["white", "black", "native american", "latino"].sample
-age = (1..140).to_a
-age = age.sample
+
+
+
+#new array to hold generated santas
+santas =[]
+#posible gender array
+gender = ["agender", "female", "male", "bigender"]
+#possbile ethnicity array
+ethnicity = ["white", "black", "native american", "latino"]
+#number of santas to create
 index = 10
 
-until index == 0 
-	gender.each do |gender|
-	ethnicity.each do |ethnicity|
-	age.each do |age|
-	  	puts "This is a santa who is #{gender}, #{ethnicity}, and is #{age} years old."
-	  	index -= 1
-	  	puts "----"
-	end
-	end
-end 
-end
-_________________________
-santas = Santas.new("male", "white")
-santas.eat_milk_and_cookies("PB")
-santas.speak
-santas.get_mad_at("Lucas")
-santas.celebrate_birthday
+while index > 0
+  new_santas = Santas.new(gender.sample, ethnicity.sample)
+  new_santas.age = rand(1..140)
+  santas.push(new_santas)
+  index -= 1
+  end
+
+p santas
+#_________________________
+
+#_Driver code___
+#santas = Santas.new("male", "white")
+#santas.eat_milk_and_cookies("PB")
+#santas.speak
+#santas.get_mad_at("Lucas")
+#santas.celebrate_birthday
