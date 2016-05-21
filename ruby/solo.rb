@@ -94,7 +94,8 @@ p new_array
 end
 
 user_loop
-
+#PROBLEMS need to be able to return string with attributes stored in array.  May not be storing answers
+#in single array because when I print array I get duplicates
 
 
 
