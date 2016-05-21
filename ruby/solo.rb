@@ -6,4 +6,16 @@
 #transforms_into(whatever(str)), 
 #destroy -prints str)   
 #
-#
+## SPECIES ------------------------
+# robot (set)
+
+# CHARACTERISTICS ----------------
+# Heigth: varies
+# age: random
+# temperment: varies
+# Name: varies
+
+# BEHAVIOR -----------------------
+# transforms per user input
+# destroys everything 
+
