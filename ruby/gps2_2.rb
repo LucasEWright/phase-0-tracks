@@ -105,3 +105,19 @@ puts print_list
 # be more concise with key/value variable names in update/add methods
 
 # Comments 
+# What did you learn about pseudocode from working on this challenge? Working through pseudocode with someone else, being able to talk through the levels and what
+#we were expecting from each level was helpful.  It was also a great, agreed upon, guide to us when coding.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?  I feel like arrays are more easily accessed and changed.
+# But,I like that hashes are easier to use for this challenge's outpus because of it's base key and value (item and quantity)
+
+# What does a method return? Methods return whatever you tell them to.
+
+# What kind of things can you pass into methods as arguments? Hashes, arrays, positional arguments, values...
+
+# How can you pass information between methods?  By using vairables (instance or regular)
+
+# What concepts were solidified in this challenge, and what concepts are still confusing? I'm ore comfortable with arrays and how hashes and
+#arrays interact.  Looping and iterations are still confusing for me, but this challenged helped me identify that knowledge gap.
+
+
