@@ -14,4 +14,15 @@ function reverse(x) {
   return x.split('').reverse().join('');
 }
 
-reverse("Lucas")
+
+// driver code
+
+// to return reverse of x
+console.log(reverse("Lucas"))
+
+// to return the reverve 
+	if (0 == 0) {
+	 console.log(reverse("Lucas"));
+}	else {
+		console.log ("Something is very wrong in the world");
+}
