@@ -1,0 +1,30 @@
+body {
+    font-family: Futura;
+}
+
+header {
+  background: #f9dede;
+  text-align: center;
+}
+
+.column-1 {
+  background: #F1B8FF;
+  display: inline-block;
+  max-width: 45%;
+  padding: 5px;
+}
+
+.column-2 {
+  background: #E6FFA2;
+  display: inline-block;
+  max-width: 45%;
+  vertical-align: top;
+  padding: 5px;
+  
+}
+
+footer {
+  background: #9AD2FF;
+  margin-top: 10px;
+  text-align: center;
+}

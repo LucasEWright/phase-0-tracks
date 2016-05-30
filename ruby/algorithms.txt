@@ -1,0 +1,24 @@
+
+ELEVATOR RIDING ROBOT  
+# Call the elevator- Extend arm and use finger to press desired elevator button. Press the up arrow to go to a higher numbered floor, or the down arrow for a lower numbered floor.- Wait to elevator arrives on your floor and the doors open.# Enter the Elevator    - Move forward in a straight line until 2 feet passed the elevator threshold, then stop.    - Rotate 180 degrees# Choose your destination-	locate internal floor buttons, determine if they to your left or right-	rotate 45 degrees towards the buttons-	move forward in a straight line 1 foot-	determine sequential order of buttons, locate needed floor-	extend arm and use finger to press desired elevator button# Exit elevator-	Wait to elevator arrives on your desired floor and the doors open.-	Move forward in a straight line until 2 feet passed the elevator threshold, then stop.#stopBRUSHING MY TEETH
+
+#Gather supplies
+-extend arm and use hand to open cabinet
+-collect green toothbrush and toothpaste
+-holding the toothbrush with left hand, position over toothbrush head and squeeze capless toothpaste tube with right hand gently for 1 second.
+-extend right arm and return toothpaste to cabinet
+
+#Brush teeth
+-with right hand, grasp and rotate cold water knob on sink clockwise
+-using left hand, hold toothbrush head under running water for 2 seconds
+-use right hand to rotate cold water knob on sink counter-clockwise
+-extend left hand to mouth and place toothbrush head in mouth
+-in a circular motion, transverse all teeth with a moderate about of pressure for 90 seconds
+-remove toothbrush from mouth and place under sink’s faucet
+-with right hand, grasp and rotate cold water knob on sink clockwise for 5 seconds
+-use right hand to rotate cold water knob on sink counter-clockwise
+
+#Return supplies
+-using left arm and hand, return toothbrush to medicine cabinet
+-close medicine cabinet door
+-look in mirror and make a goofy smile to show off your pearly whites
