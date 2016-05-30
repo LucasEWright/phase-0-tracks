@@ -21,7 +21,7 @@ for (i = 0; i < keys.length; i++) {
 
 //console.log("Like my coat, my horses have many colors " + names['name'] + "-" + colors['colors']);
 
-//============CAR=======================
+//============CAR================
 
 var car = {model: 'Spot', year: 3, topSpeed: "100mph"};
 
