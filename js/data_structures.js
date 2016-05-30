@@ -37,8 +37,7 @@ function Car(model, year, topSpeed) {
 	console.log("CAR INITIALIZATION COMPLETE");
 }
 console.log("Let's build a new car ...");
-// Here is where we call that constructor function
-// that we just made ...
+// call that constructor function here
 var anotherCar = new Car("Mustang", 2016, "145mph");
 console.log(anotherCar);
 console.log("Our new car can go:");
@@ -52,4 +51,3 @@ console.log("This new dog can go, too:");
 yetAnotherCar.go();
 console.log("----");
 
-//NEED TO ADD driver code
