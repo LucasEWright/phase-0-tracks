@@ -7,14 +7,14 @@ names.push("Hiedi")
 var horseObject = {},
     i,
     keys =  names //['one', 'two', 'three'],
-    values = colors  //['a', 'b', 'c'];
+    values = colors  
 
 for (i = 0; i < keys.length; i++) {
     horseObject[keys[i]] = values[i];
     horseObject 
 }
 
-
+// displays colors only
 //for (var i = 0; i < colors.length; i++) {
 //	console.log(colors[i]);
 //}
