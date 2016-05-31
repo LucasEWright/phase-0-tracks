@@ -7,14 +7,15 @@
 //	Post loop, return holding variable. 
 //==============================================================================
 
-var array = ["long", "longer", "longest"];
+var array = ["long", "longer", "longestest", "longest"];
 
  index = 0; 
  strLength = array[0].length;
- for(var i=1; i< array.length; i++) {
-    if(array[i].length > strLength) {
-        index = i; strLength = array[i].length;
+ 
+ for(var i=0; i < array.length; i++) {
+    if (array[i].length > strLength) {
+        index = i; strLength = array[i];
     }
 }
 //return array[i];
-//console.log(strLength);
+console.log(strLength)
