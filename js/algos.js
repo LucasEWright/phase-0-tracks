@@ -7,6 +7,10 @@
 //	Post loop, return holding variable. 
 
 
+//==========================================================
+// 1st attempt -  Problems:
+// It's returning the length of the longest string, not the actually string
+
 var array = ["long", "longer", "longestest", "longest"];
 
  index = 0; 
@@ -17,11 +21,28 @@ var array = ["long", "longer", "longestest", "longest"];
         index = i; strLength = array[i].length;
     }
 }
-//return array[i];
 console.log(strLength)
+//==========================================================
 
-// Problems
-// It's returning the length of the longest string, not the actually string
+
+//==========================================================
+// returns longest string in array
+function longestStr(ary) {
+    var longStr = ary[0]
+    for (var i = 0; i < ary.length; i++) {
+        if (ary[i].length > longStr.length) {
+            longStr = ary[i];
+        }
+    }
+    return(longStr)
+}
+//=======Driver code=====
+
+console.log(longestStr(["long", "longer", "longest", "longestest"]))
+console.log(longestStr(["long string", "longer", "longest string", "longestest"]))
+
+//==========================================================
+
 
 
 //============pseudocode for relaeae 1- key value match===============================
@@ -39,10 +60,12 @@ person4 = {name: "Ivan", age: 35}
 function compareLong(a, b) {
 	return (a.name === b.name || a.age === b.age);
 }
-
+// Driver code
 compareLong(person1, person2); 	//=> true
 compareLong(person1, person3);	//=> true
 compareLong(person2, person4);	//=> false8
+
+//==========================================================
 
 //	The following is a solution I found while looking for a solution to something must less specefic, I assume this is what
 // 	would be considered a "slick search function"
@@ -50,7 +73,11 @@ compareLong(person2, person4);	//=> false8
 //	function compare(a, b) {
 // 	return JSON.stringify(a, b) === JSON.stringify(a, b);
 //}
+// driver code
 //compare(person1, person2);
+
+//==========================================================
+
 
 //=============pseudocode for relaeae 2-Random test data================================
 //	create an empty array 
@@ -62,7 +89,7 @@ compareLong(person2, person4);	//=> false8
 //	create 10 arrays
 //	prints array
 //	call longest word method (not currently working)
-
+//==========================================================
 
 // 	RANDOM WORD GENERATOR
 //	a is set equal to a random number 
@@ -76,10 +103,9 @@ function wordGenerator(a) {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
     return text;
 }
-
+//  driver code
 wordGenerator(a)
 
-//=== === ==== ==== ==== ====
 
 // 	ARRAY GENERATOR
 // funciton to use the wordGenerator to create a number (b) of workd and shovel them into an array
@@ -88,13 +114,10 @@ function arrayMaker(b) {
 //	creating (b) number of words and pushing them into the array
 	array.push(wordGenerator(a)*b) 
 }
+// driver code
 arrayMaker(3)
 
-// problems
+// Problems:
 // array maker not working 
 
-
-//COMMENTS
-// Still need to figure out array generator and get release 0 to return the string, not the 
-// length of the longest string
 
