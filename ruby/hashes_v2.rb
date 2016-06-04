@@ -9,6 +9,14 @@ puts "What's your name?"
 applicant [:name] = gets.chomp
 puts "How old are you?"
 applicant [:age] = gets.chomp.to_i
+puts "Are you sure that's your real age? If you're sticking to that answer, type Yes, otherwise
+quit playing and give it me straight."
+real_age = gets.chomp.capitalize
+	if real_age == "Yes"
+		puts "Ok... whatever you say."
+	else
+		applicant [:age] = real_age.to_i
+	end
 puts "How many children do you care for?"
 applicant [:children] = gets.chomp.to_i
 puts "In a few words, what is your prefered decor?"
