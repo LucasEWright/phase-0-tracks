@@ -1,3 +1,8 @@
+# Create a new hash to store all the clients answers (design to collect multiple
+# types of data)
+# Collect answers and convert into approp. data type and format 
+# Print out hash array after user input is complete
+
 applicant = Hash.new 
 
 puts "What's your name?"
@@ -15,7 +20,8 @@ answer = gets.chomp.capitalize
 	elsif answer == "No"
 		applicant [:serious] = false
 	else
-		puts "I don't you as a client, because you can't follow simple directions. BYE."
+		puts "I don't you as a client, because you can't follow simple directions.
+		 Unless you have lots of money to spend. See next question."
 	end 
 puts "What is your budget for this project?"
 	budget_answer = gets.chomp.to_i
@@ -28,3 +34,5 @@ puts "What is your budget for this project?"
 		applicant [:budget] = budget_answer
 		applicant [:is_a_go] = false
 	end
+
+p applicant
