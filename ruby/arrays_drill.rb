@@ -1,16 +1,23 @@
 def test_array(a, b, c)
- 	return a, b, c 
+ 	array = a, b, c 
+ 	#below is a check to make sure it's returning an array 
+ 	#array[1].class
+ 	#array.class
 end
+
+test_array(1, "c", 5)
 
 
 def test_array_2(a, b)
- 	return a, b
-end
+	a.push (b)
+end 
+
+test_array_2([1,2,3], "H")
 
 
 def test_array_3(arr, value)
   arr[1].to_i == value.to_i
-end
+end]
 #_______________________________________
 
 food = [ ]
@@ -46,10 +53,11 @@ p new_array
 
 
 
-#_______________________________________
-p test_array(1,5,"bunny")
+#_____________DRIVER CODE_________________________
 
-p test_array_2([1,2,3,"x","y","z"],"bunny")
+test_array(1, "c", 5)
+
+test_array_2([1,2,3,"x","y","z"],"bunny")
 
 
 p test_array_3([10, 9, 8], 9)
