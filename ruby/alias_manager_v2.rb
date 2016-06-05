@@ -1,20 +1,11 @@
-vowel_str = ("aeiou")
-consonant_str = ("abcdefghijklmnopqrstuvwxyz")
+# define new method
+# create method to take original name and set to variable
+# create an array of two items, one for each last and first names, reverse them 
+# iterate over each letter in the array and return the next vowel or consonant, modifying the array 
+# create new hash, using originla name as the key and the alias as the value
+# iterate over hash to display the original name and new alias
+# create loop to repeat method until condition is met (index)
 
-vowel_array = ["a", "e", "i", "o", "u"]
-consonant_array = ("abcdefghijklmnopqrstuvwxyz").split("")
-
-def next_letter(a)
-	a.tr('abcdefghijklmnopqrstuvwxyz', 'ecdfighjoklmnpuqrstvawxyzb')
-end
-
-def next_vowel(a)
-	a.tr('aeiou', 'eioua')
-end
-
-def next_con(a)
-	a.tr('bcdfghjklmnpqrstvwxyz', 'bcdfghjklmnpqrstvwxyz')
-end
 
 @new_name = []
 @newHash = Hash.new
@@ -22,16 +13,15 @@ end
 
 def test_method
 puts "Please enter a name:"
-@first_name = gets.chomp.upcase
-	if @first_name == "QUIT"
+first_name = gets.chomp.upcase
+	if first_name == "QUIT"
 		p "Stopped"
 		@newHash = Hash[*@new_name]
 		@newHash.each { |name1, name2| p "#{name2} is actually #{name1}." } 
 		@index = 0
 	else
-		
-	@new_name.push(@first_name)
-	real_name = @first_name
+	@new_name.push(first_name)
+	real_name = first_name
 	real_name = real_name.split(" ").reverse
 	real_name = real_name.join(" ").downcase.split("")
 
