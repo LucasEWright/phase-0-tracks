@@ -1,4 +1,4 @@
- module Run
+ module Shout
  	def for_your_life(name)
  		puts name + " run for your life!!!"
  	end
@@ -8,11 +8,11 @@
 end
 
 class Zombies
-	include Run
+	include Shout
 end 
 
 class Work
-	include Run
+	include Shout
 end
 
 zombies = Zombies.new
