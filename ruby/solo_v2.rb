@@ -43,29 +43,35 @@ class Transformer
 end
 
 @index = 1
-@new_array = []
+@new_array = {}
 
 def user_loop 
 
 new_transformer = Transformer.new
 puts "How tall, in feet, is your Transformer?"
 	height = gets.chomp
+	#@new_array["height" => height]
 puts "What is thier temperment?"
 	temperment = gets.chomp
+	#@new_array["temperment" => temperment]
 puts "What does your Transformer turn into?"
 	transforms_into = gets.chomp
+	#@new_array["transforms_into" => transforms_into]
 puts "Would you like to create another Transformer? yes or no"
 	answer = gets.chomp
 	if answer == "yes" 
-		new_transformer = Transformer.new#(height, temperment, transforms_into)
+		new_transformer = Transformer.new
+		@new_array << { :height => height, :temperment => temperment, :transforms_into => transforms_into }
 		user_loop
 	else 
-		new_transformer = Transformer.new#(height, temperment, transforms_into)
+		new_transformer = Transformer.new
 		@index = 0
+		@new_array << { :height => height, :temperment => temperment, :transforms_into => transforms_into }
 		puts "Thanks for playing!!"
 	end
-	 p @new_array
-		puts "You've create a Transformer who is a #{temperment} robot that is #{@height} feet tall and can turn into a #{@transforms_into}!"
+		#@new_array["height" => height "temperment" => temperment "transforms_into" => transforms_into]
+		p @new_array
+		puts "You've create a Transformer who is a #{temperment} robot that is #{height} feet tall and can turn into a #{transforms_into}!"
 end
 
 
