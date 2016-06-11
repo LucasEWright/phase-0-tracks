@@ -22,24 +22,16 @@
 
 class Transformer
 	attr_reader :type, :age
-	attr_accessor :height, :mood, :first, :last, :transforms_into
+	attr_accessor :height, :mood, :first, :last, :transforms_into, :temperment
 
-	def initialize 
+	def initialize #(height, temperment, transforms_into)
 		puts "Initializing a new transformer"
 		@type = "robot"
-		@age = rand(0...100)
-		#@height  
-		#@mood 
-	#	puts "who is a #{age} year old #{mood} #{type} that is #{height} feet tall."
+		#@height = height
+		#@temperment = temperment
+		#@transforms_into = transforms_into
 	end	
 
-	def name(first, last)
-		@first = first
-		@last = last
-		@name = @first + @last
-		puts "Hello, my name is #{name}"
-	end
-	
 	def transforms_into(anything)
 		@transforms_into = anything
 		puts "I've turned into a #{anything}"
@@ -57,31 +49,23 @@ def user_loop
 
 new_transformer = Transformer.new
 puts "How tall, in feet, is your Transformer?"
-	@height = gets.chomp
- 	 #new_transformer.height = @height
+	height = gets.chomp
 puts "What is thier temperment?"
-	@mood = gets.chomp
-puts "What is thier first name?"
-	@first = gets.chomp
-	 #new_transformer.first = @first
-puts "What is thier last name?"
-	@last = gets.chomp
-	 #new_transformer.last = @last
+	temperment = gets.chomp
 puts "What does your Transformer turn into?"
-	@transforms_into = gets.chomp
-	 #new_transformer.transforms_into = @transforms_into
+	transforms_into = gets.chomp
 puts "Would you like to create another Transformer? yes or no"
 	answer = gets.chomp
 	if answer == "yes" 
-		@new_array.push(@height, @mood, @first, @last, @transforms_into)
+		new_transformer = Transformer.new#(height, temperment, transforms_into)
 		user_loop
 	else 
-		@new_array.push(@height, @mood, @first, @last, @transforms_into)
+		new_transformer = Transformer.new#(height, temperment, transforms_into)
 		@index = 0
 		puts "Thanks for playing!!"
 	end
 	 p @new_array
-		puts "You've create a Transformer who is a #{@mood} robot named #{@first} #{@last} who is #{@height} feet tall and can turn into a #{@transforms_into}!"
+		puts "You've create a Transformer who is a #{temperment} robot that is #{@height} feet tall and can turn into a #{@transforms_into}!"
 end
 
 
