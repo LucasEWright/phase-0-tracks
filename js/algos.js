@@ -121,3 +121,21 @@ arrayMaker(3)
 // array maker not working 
 
 
+// working on creating multiple words for array.
+function wordGenerator(a,x) {
+    var array = [];
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
+    while(x !== 0); {
+    for( var i=0; i < a; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    array.push(text);
+    x -= 1;
+    }return array;
+
+}
+console.log()
+wordGenerator(a,2)
+
+
