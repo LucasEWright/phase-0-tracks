@@ -4,3 +4,21 @@
 // turn back into a string
 // display new string
 //
+
+function reverse(x) {
+return x.split("").reverse().join("")
+}
+
+// driver code for method
+console.log(reverse("Lucasssss"))
+
+a = true;
+b = false;
+
+if (a==b) {
+	console.log(reverse("This is my creative string."))
+}	else {
+	console.log ("Something is wrong.")
+}
+
+
