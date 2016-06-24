@@ -1,0 +1,53 @@
+1)
+sqlite> SELECT * FROM dogs;
+
+1|spike|3|false|101
+2|heidi|14|true|101
+3|bella|4|false|103
+4|frida|11|false|102
+5|pookie|1|true|103
+6|bud|19|false|103
+
+2)
+sqlite> UPDATE dogs SET
+   ...> age=5 WHERE
+   ...> name="spike";
+
+sqlite> SELECT * FROM dogs;
+1|spike|5|false|101
+2|heidi|14|true|101
+3|bella|4|false|103
+4|frida|11|false|102
+5|pookie|1|true|103
+6|bud|19|false|103
+
+3)
+sqlite> SELECT * FROM dogs, walkers WHERE  walkers.walker_id = dogs.walker;
+
+2|heidi|14|true|101|1|Lucas|101
+1|spike|5|false|101|1|Lucas|101
+4|frida|11|false|102|2|Ivan|102
+3|bella|4|false|103|3|Matilda|103
+6|bud|19|false|103|3|Matilda|103
+5|pookie|1|true|103|3|Matilda|103
+
+4)
+sqlite> SELECT dogs.name, walkers.name FROM dogs JOIN walkers ON dogs.walker = walkers.walker_id;
+
+heidi|Lucas
+spike|Lucas
+frida|Ivan
+bella|Matilda
+bud|Matilda
+pookie|Matilda
+
+5)
+sqlite> DELETE FROM dogs 
+   ...> WHERE age<=2;
+
+sqlite> SELECT * FROM dogs;
+1|spike|5|false|101
+2|heidi|14|true|101
+3|bella|4|false|103
+4|frida|11|false|102
+6|bud|19|false|103
