@@ -44,11 +44,13 @@ end
 #change_date(db, 1, "12/1/2017")
 
 def show_table(db)
-	db.execute("SELECT * FROM task_list")
+	tasks = db.execute ("SELECT * FROM task_list")
+	tasks.each do |task|
+	puts "ID:#{task['id']} = '#{task['Task']}'. This task is due #{task['DueDate']} and is currently tagged as '#{task['Priority']} priority'."
+	end 
 end
 
-show_table(db)
-
+#show_table(db)
 
 #========= USER INTERFACE ========
 
@@ -63,7 +65,7 @@ while newTasks == true
 			p "Then get to work on all those tasks! Nerd."
 			newTasks = false
 		else
-			puts "Great! Please enter what you need to get down:"
+			puts "Great! Please enter what you need to get done:"
 			task = gets.chomp
 			puts "Is this 'high' or 'low' priority task?"
 			priority = gets.chomp
@@ -72,6 +74,10 @@ while newTasks == true
 			puts "When does this task need to be complete? e.g. '12/1/2016', please puts 'ASAP' if the task is immeadiate."
 			due = gets.chomp
 			new_task(db,task,priority,type,due)
+			puts "Done! Here is your current task list:"
+			puts "============================"
+			show_table(db)
+			puts "============================"
 		end 
 end 
 	modifyTasks = true
@@ -85,31 +91,46 @@ while modifyTasks == true
 			puts "Type 'complete' to delete a task that has been completed, 'date' to change the due date or 'priority' to update the priorty category of a task."
 			to_modify = gets.chomp
 			if to_modify == "complete" 
-				#db.execute("SELECT * FROM task_list")
+				puts "Here is your current task list:"
+				puts "============================"
+				show_table(db)
+				puts "============================"
 				puts "What is the id number of the task you'd like to delete?"
 				task_id = gets.chomp
 				complete_task(db,task_id)
+				puts "Done!"
 			elsif to_modify == "date"
-				#db.execute("SELECT * FROM task_list")
+				puts "Here is your current task list:"
+				puts "============================"
+				show_table(db)
+				puts "============================"
 				puts "What is the id number of the task you'd like to update?"
 				task_id = gets.chomp
 				puts "What is the new date? e.g. 12/3/2016"
 				new_date = gets.chomp
 				change_date(db, task_id, new_date)
+				puts "Done!"
 			elsif to_modify == "priority"
-				#db.execute("SELECT * FROM task_list")
+				puts "Here is your current task list:"
+				puts "============================"
+				show_table(db)
+				puts "============================"
 				puts "What is the id number of the task you'd like to update?"
 				task_id = gets.chomp
 				puts "Change to 'high' or 'low'?"
 				new_priority = gets.chomp
 				change_priority(db, task_id, new_priority)
+				puts "Done!"
 			else
 				puts "Something has gone horribly wrong!!!"
 			end 
 	end 
 end 
 
-					
+puts "==================================================="
+puts "Thanks for playing! Here is your current task list:"
+show_table(db)
+puts "==================================================="				
 
 					
 
