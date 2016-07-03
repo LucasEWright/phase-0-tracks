@@ -1,5 +1,5 @@
 def morning 
-	
+
 	puts "Is it before noon?"
 	yield ("Felicia")
 end
@@ -13,7 +13,7 @@ breakfast_food = [
 	"coffee"
 ]
 
-liguor_effects = {
+liquor_effects = {
 	"tequilla"=>"crazy",
 	"whiskey"=>"rowdy",
 	"vodka"=>"ill",

@@ -1,11 +1,11 @@
-#Species- 
+#Species----
 #Slobberkin Fluffernut
-#Characteristics-
+#Characteristics----
 #Fur legnth: long
 #Eye color: brown
 #Fur color: varies
 #Name: varies
-#Behavior-
+#Behavior----
 #Slobbers
 #Eats
 #Sleeps
