@@ -1,0 +1,12 @@
+body {
+	font-family: Georgia;
+	background-color: lightgrey;
+	color: navy;
+	font-style: bold;
+	max-width: 750px;
+
+}
+#puppy {
+	width: 250px;
+	float: right;
+}
