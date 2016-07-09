@@ -7,10 +7,10 @@ db.results_as_hash = true
 
 # write a basic GET route
 # add a query parameter
-# GET /
-get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
-end
+  # GET /
+  #get '/' do
+  #  "#{params[:name]} is #{params[:age]} years old."
+#send
 
 # write a GET route with
 # route parameters
@@ -44,3 +44,25 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# GET route that displays a static address
+get '/contact' do
+  "Address: 666 W. Elm St. Murderville, USA"
+  end
+
+# GET route that takes a person's name and returns a string
+get '/' do
+  name = params[:name]
+  if name
+    "Great job, #{name}!"
+  else
+    "Great job!"
+  end
+end
+
+# GET route that takes two integers and returns thier added value
+get '/:number_1/plus/:number_2' do
+  sum = params[:number_1].to_i + params[:number_2].to_i
+  "#{sum}"
+end
+
